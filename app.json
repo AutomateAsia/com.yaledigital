@@ -6,12 +6,12 @@
     "version": "0.2.0",
     "compatibility": ">=0.9.2",
     "author": {
-        "name": "Tim Eggleston",
-        "email": "tim@eggleston.ca"
+        "name": "Mike Lim",
+        "email": "mike.lim@automate.asia"
     },
     "category": [ "security" ],
     "description": {
-		"en": "Let Homey control your Yale lock"
+		"en": "Let Homey control your Yale YRD220"
     },
 	"images": {
 		"large": "/assets/images/large.jpg",
