@@ -20,7 +20,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				return report['Door Lock Mode'] === 'Door Secured';
 
 			}
-		},
+		}/*,
 		'alarm_keypad_unlocked': {
 			'command_class'				: 'COMMAND_CLASS_ALARM',
 			//'command_get'				: 'ALARM_GET',
@@ -102,7 +102,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 					return null;
 				}
 			}
-		}
+		}*/
 	},
 	settings: {
 		'audio_mode': {
