@@ -167,7 +167,6 @@
 			},
 		    "class": "lock",
 		    "capabilities": [ "locked"],
-		    //"capabilities": [ "locked" , "alarm_keypad_unlocked", "alarm_manual_unlocked", "alarm_keypad_locked", "alarm_manual_locked", "alarm_tamper" ],
 		    "zwave": {
 			    "manufacturerId": 297,
 			    "productTypeId": 2,
