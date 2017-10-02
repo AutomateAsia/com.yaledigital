@@ -68,7 +68,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 					return null;
 				}
 			}
-		}*/
+		}
 	},
 	settings: {
 		'audio_mode': {
