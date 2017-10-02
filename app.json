@@ -20,58 +20,10 @@
 	"flow": {
 		"triggers": [
 			{
-				"id": "keypad_unlocked",
-				"title": {
-					"en": "The keypad is unlocked by someone"
-				},
-				"tokens": [
-					{
-						"name": "userid",
-						"title": {
-							"en": "UserID"
-						},
-						"example": {
-							"en": "0"
-						}
-					}
-				],
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=yalelock_v1"
-					}
-				]
-			},
-			{
 				"id": "manual_unlocked",
 				"title": {
 					"en": "The lock is manually unlocked"
 				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=yalelock_v1"
-					}
-				]
-			},
-			{
-				"id": "keypad_locked",
-				"title": {
-					"en": "The keypad is locked by someone"
-				},
-				"tokens": [
-					{
-						"name": "userid",
-						"title": {
-							"en": "UserID"
-						},
-						"example": {
-							"en": "0"
-						}
-					}
-				],
 				"args": [
 					{
 						"name": "device",
@@ -166,7 +118,7 @@
 				"small": "/drivers/yalelock_v1/assets/images/small.jpg"
 			},
 		    "class": "lock",
-		    "capabilities": [ "locked", "alarm_keypad_unlocked"],
+		    "capabilities": [ "locked", "alarm_manual_unlocked", "alarm_manual_locked"],
 		    "zwave": {
 			    "manufacturerId": 297,
 			    "productTypeId": 2,
