@@ -21,14 +21,12 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 
 			}
 		},
-		'alarm_manual_unlocked': {
-			'command_class'				: 'COMMAND_CLASS_SECURITY',
-			//'command_get'				: 'ALARM_GET',
-			'command_report'			: 'SECURITY_COMMANDS_SUPPORTED_REPORT',
+		'alarm_keypad_unlocked': {
+			'command_class'				: 'COMMAND_CLASS_ALARM',
+			'command_get'				: 'ALARM_GET',
+			'command_report'			: 'ALARM_REPORT',
 			'command_report_parser': (report, node) => {
-				console.error('====== Showing Report ======');
-				console.error(report);
-				console.error(node);
+				console.log('I'm here');
 			}
 		}
 	},
