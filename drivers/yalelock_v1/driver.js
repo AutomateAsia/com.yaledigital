@@ -26,9 +26,9 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			//'command_get'				: 'ALARM_GET',
 			'command_report'			: 'SECURITY_COMMANDS_SUPPORTED_REPORT',
 			'command_report_parser': (report, node) => {
-				console.log('====== Showing Report ======');
-				console.log(report);
-				console.log(node);
+				console.error('====== Showing Report ======');
+				console.error(report);
+				console.error(node);
 			}
 		}
 	},
