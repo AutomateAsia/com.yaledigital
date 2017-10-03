@@ -22,51 +22,13 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
 		'alarm_manual_unlocked': {
-			'command_class'				: 'COMMAND_CLASS_ALARM',
+			'command_class'				: 'COMMAND_CLASS_SECUIRTY',
 			//'command_get'				: 'ALARM_GET',
 			'command_report'			: 'ALARM_REPORT',
 			'command_report_parser': (report, node) => {
-				if (report.hasOwnProperty("Alarm Type")) {
-					if (report['Alarm Type'] == '22') {
-						Homey.manager('flow').triggerDevice('manual_unlocked', null, null, node.device_data);
-						//console.log('alarm_manual_unlocked');
-					};
-					return null;
-				}
-			}
-		},
-		'alarm_manual_locked': {
-			'command_class'				: 'COMMAND_CLASS_ALARM',
-			//'command_get'				: 'ALARM_GET',
-			'command_report'			: 'ALARM_REPORT',
-			'command_report_parser': (report, node) => {
-				if (report.hasOwnProperty("Alarm Type")) {
-					if (report['Alarm Type'] == '21' && report.hasOwnProperty("Alarm Level")) {
-						const state = {
-							"locktype": report['Alarm Level']
-						};
-						Homey.manager('flow').triggerDevice('manual_locked', null, state, node.device_data);
-						//console.log('alarm_manual_locked, locktype is ' + report['Alarm Level']);
-					};
-					return null;
-				}
-			}
-		},
-		'alarm_tamper': {
-			'command_class'				: 'COMMAND_CLASS_ALARM',
-			//'command_get'				: 'ALARM_GET',
-			'command_report'			: 'ALARM_REPORT',
-			'command_report_parser': (report, node) => {
-				if (report.hasOwnProperty("Alarm Type")) {
-					if (report['Alarm Type'] == '161' && report.hasOwnProperty("Alarm Level")) {
-						const state = {
-							"alarmtype": report['Alarm Level']
-						};
-						Homey.manager('flow').triggerDevice('tamper_alarm', null, state, node.device_data);
-						//console.log('alarm_tamper, alarmtype is ' + report['Alarm Level']);
-					};
-					return null;
-				}
+				console.log('====== Showing Report ======');
+				console.log(report);
+				console.log(node);
 			}
 		}
 	},
