@@ -111,14 +111,14 @@
 	    {
 		    "id": "yalelock_v1",
 		    "name": {
-			    "en": "Yale Push Button Deadbolt"
+			    "en": "Yale Touch Pad Deadbolt"
 		    },
 			"images": {
 				"large": "/drivers/yalelock_v1/assets/images/large.jpg",
 				"small": "/drivers/yalelock_v1/assets/images/small.jpg"
 			},
 		    "class": "lock",
-		    "capabilities": [ "locked", "alarm_manual_unlocked"],
+		    "capabilities": [ "locked"],
 		    "zwave": {
 			    "manufacturerId": 297,
 			    "productTypeId": 2,
