@@ -118,7 +118,7 @@
 				"small": "/drivers/yalelock_v1/assets/images/small.jpg"
 			},
 		    "class": "lock",
-		    "capabilities": [ "locked"],
+		    "capabilities": [ "locked", "alarm_manual_unlocked"],
 		    "zwave": {
 			    "manufacturerId": 297,
 			    "productTypeId": 2,
