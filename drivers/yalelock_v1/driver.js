@@ -22,14 +22,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
 		'alarm_manual_unlocked': {
-			'command_class'				: 'COMMAND_CLASS_ALARM',
-			'command_get'				: 'ALARM_GET',
-			'command_report'			: 'ALARM_REPORT',
-			'command_report_parser': (report, node) => {
-				console.log(report);
-				console.log(node);
-					
-			}
+			'command_class'				: 'COMMAND_CLASS_ALARM'
 		}
 	},
 	settings: {
