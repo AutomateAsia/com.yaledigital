@@ -26,7 +26,9 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_get'				: 'ALARM_GET',
 			'command_report'			: 'ALARM_REPORT',
 			'command_report_parser': (report, node) => {
-				console.log('I'm here');
+				console.log(report);
+				console.log(node);
+					
 			}
 		}
 	},
