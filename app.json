@@ -1,7 +1,7 @@
 {
-    "id": "com.yalelock",
+    "id": "com.samsungdigital",
     "name": {
-        "en": "Yale Lock"
+        "en": "Samsung Digital Lock"
     },
     "version": "0.2.0",
     "compatibility": ">=0.9.2",
